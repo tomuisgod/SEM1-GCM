@@ -11,13 +11,20 @@ def svk():
     print("#                                                  #")
     print("#        🐀 STLAČ [A] PRE SPUSTENIE HRY 🐀        #")
     print("#        🐀 STLAČ [X] PRE SKONČENIE HRY 🐀        #")
-    print("#        🐀 STLAČ [L] PRE ZMENU JAZYKA🐀          #")
+    print("#        🐀 STLAČ [L] PRE ZMENU JAZYKA  🐀        #")
     print("#                                                  #")
     print("#                                                  #")
     print("####################################################")
-    choose_svk = input("              Choose your answer:        ")
+    choose_svk = input("              Vyber si odpoveď:        ")
     if choose_svk == "A":
-        hra_svk()   
+        os.system("clear")
+        #hra_svk()
+    if choose_svk == "X":
+        os.system("exit")
+    if choose_svk == "L":
+        os.system("clear")
+        LANG()
+
 
 
 def eng():
@@ -31,9 +38,16 @@ def eng():
     print("#                                                  #")
     print("#                                                  #")
     print("####################################################")
-    choose_eng = input("              Vyber si odpoveď:        ")
+    choose_eng = input("              Choose your answer:        ")
     if choose_eng == "A":
-        hra_eng()
+        os.system("clear")
+        # hra_eng()
+    if choose_eng == "X":
+        os.system("exit")
+    if choose_eng == "L":
+        os.system("clear")
+        LANG()
+
 def rus():
     print("####################################################")
     print("#          🐀 СИМУЛЯТОР КРЫСИНОЙ ЖИЗНИ 🐀         #")
@@ -45,7 +59,16 @@ def rus():
     print("#                                                  #")
     print("#                                                  #")
     print("####################################################")
-    choose_rus = input("             Oтвечaй:        ")
+    choose_rus = input("                   Oтвечaй:        ")
+    if choose_rus == "A":
+        os.system("clear")
+        # hra_rus()
+    if choose_rus == "X":
+        os.system("exit")
+    if choose_rus == "L":
+        os.system("clear")
+        LANG()
+
 
 def hun():
     print("####################################################")
@@ -58,7 +81,15 @@ def hun():
     print("#        🐀 A NYELV MEGVÁLTOZTATÁSÁHOZ 🐀         #")
     print("#                                                  #")
     print("####################################################")
-    choose_hun = input("              Válsz:        ")
+    choose_hun = input("                     Válsz:        ")
+    if choose_hun == "A":
+        os.system("clear")
+        # hra_hun
+    if choose_hun == "X":
+        os.system("exit")
+    if choose_hun == "L":
+        os.system("clear")
+        LANG()
 
 def ar():
     print("####################################################")
@@ -70,39 +101,48 @@ def ar():
     print("#           🐀 Nاضغط [L] لتغيير اللغة 🐀         #")
     print("#                                                  #")
     print("####################################################")
-    choose_ar = input("              أَجِبْ:        ")
+    choose_ar = input("                      أَجِبْ:        ")
 
+    if choose_ar == "A":
+        os.system("clear")
+        # hra_ar
+    if choose_ar == "X":
+        os.system("exit")
+    if choose_ar == "L":
+        os.system("clear")
+        LANG()
 
 
 # INITIAL LANG SETUP
-os.system("clear")
-print("####################################################")
-print("#            🐀 POTKAN LIFE SIMULATOR 🐀          #")
-print("#                                                  #")
-print("#                                                  #")
-print("#              🐀  [1] SLOVAK    🐀               #")
-print("#              🐀  [2] ENGLISH   🐀               #")
-print("#              🐀  [3] RUSSIAN   🐀               #")
-print("#              🐀  [4] HUNGARIAN 🐀               #")
-print("#              🐀  [5] ARABIC    🐀               #")
-print("#                                                  #")
-print("#                                                  #")
-print("####################################################")
+def LANG():
+    os.system("clear")
+    print("####################################################")
+    print("#            🐀 POTKAN LIFE SIMULATOR 🐀          #")
+    print("#                                                  #")
+    print("#                                                  #")
+    print("#              🐀  [1] SLOVAK    🐀               #")
+    print("#              🐀  [2] ENGLISH   🐀               #")
+    print("#              🐀  [3] RUSSIAN   🐀               #")
+    print("#              🐀  [4] HUNGARIAN 🐀               #")
+    print("#              🐀  [5] ARABIC    🐀               #")
+    print("#                                                  #")
+    print("#                                                  #")
+    print("####################################################")
 
-choose = int(input("              Choose your language:        "))
-if choose == 1:
-    os.system("clear")
-    svk()
-elif choose == 2:
-    os.system("clear")
-    eng()
-elif choose == 3:
-    os.system("clear")
-    rus()
-elif choose == 4:
-    os.system("clear")
-    hun()
-elif choose == 5:
-    os.system("clear")
-    ar()
+    choose = int(input("              Choose your language:        "))
+    if choose == 1:
+        os.system("clear")
+        svk()
+    elif choose == 2:
+        os.system("clear")
+        eng()
+    elif choose == 3:
+        os.system("clear")
+        rus()
+    elif choose == 4:
+        os.system("clear")
+        hun()
+    elif choose == 5:
+        os.system("clear")
+        ar()
 
