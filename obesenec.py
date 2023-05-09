@@ -24,7 +24,7 @@ while pokus<10 and s_copy != s_hadanie:
                 else:
                     pokus += 1
                     print("Nesprávne, tvoj pokus:", pokus)
-        else:
+        elif hadanie is int or len(hadanie) > 1:
             print("ERROR: Nezadal si písmeno")
             hadanie = ("Zadaj písmeno: ")
 
