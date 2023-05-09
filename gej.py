@@ -49,11 +49,12 @@ while pokus<10 and s_copy != s_hadanie:
                 t = turtle.Pen()
                 t.speed(100000)
                 t.penup()
-                for x in range(180):
+                t.right(180)
+                for y in range(180):
                     t.forward(1)
-                    t.left(90)
+                    t.left(1)
                 t.pendown()
-                t.right(90)
+
                 
                 
 
