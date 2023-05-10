@@ -24,7 +24,7 @@ while pokus<10 and s_copy != s_hadanie:
                 else:
                     pokus += 1
                     print("Nesprávne, tvoj pokus:", pokus)
-        elif hadanie is int or len(hadanie) > 1:
+       elif hadanie is int or len(hadanie) > 1:
             print("ERROR: Nezadal si písmeno")
             hadanie = ("Zadaj písmeno: ")
 
@@ -50,14 +50,13 @@ while pokus<10 and s_copy != s_hadanie:
             
             #ciara hore
             if pokus == 2:
-                t = turtle.Pen()
-                t.speed(100000)
                 t.penup()
-                t.right(180)
-                for y in range(180):
+                t.left(180)
+                for y in range(90):
                     t.forward(1)
                     t.left(1)
                 t.pendown()
+                t.right(90)
                 t.forward(200)
             
             #ciara doprava
@@ -80,7 +79,7 @@ while pokus<10 and s_copy != s_hadanie:
             if pokus == 6:
                 for x in range(180):
                     t.forward(1)
-                    t.right(1)
+                    t.left(1)
                 t.forward(50)
             
             #prava ruka
