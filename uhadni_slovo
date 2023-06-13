@@ -1,0 +1,34 @@
+import random
+
+def vyber_slovo():
+    slova = ["samo", "vymena"] 
+    return random.choice(slova)
+
+def zobraz_nahodne_pismeno(slovo, uhodnute_pismena):
+    nepouzite_pismena = [p for p in slovo if p not in uhodnute_pismena]
+    pismeno = random.choice(nepouzite_pismena)
+    uhodnute_pismena.append(pismeno)
+    return pismeno
+
+def hadaj_slovo(slovo):
+    uhodnute_pismena = []
+    while True:
+        hadane_slovo = input("Uhádni slovo alebo stlač Enter pre náhodné písmeno: ")
+        if hadane_slovo == '':
+            pismeno = zobraz_nahodne_pismeno(slovo, uhodnute_pismena)
+            print("Náhodné písmeno:", pismeno)
+        elif hadane_slovo == slovo:
+            print("Gratulujem! Uhádli ste slovo!")
+            break
+        else:
+            print("Nesprávne uhádnuté slovo. Skúste znova.")
+    print("Koniec hry.")
+
+def main():
+    slovo = vyber_slovo()
+    print("Hádajte slovo!")
+    hadaj_slovo(slovo)
+
+if __name__ == '__main__':
+    main()
+
